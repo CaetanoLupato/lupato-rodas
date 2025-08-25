@@ -1,0 +1,72 @@
+.cards-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('../../assets/card-img.png') center/cover no-repeat;
+  background-attachment: fixed;
+  text-align: center;
+  color: #FFC800;
+  scroll-margin: 80px;
+}
+
+.cards-section .cards-title {
+   font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: #FFC800;
+    letter-spacing: 2px;
+}
+
+.cards-section .cards-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cards-section .card {
+  background-color: #007bc2cc;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.cards-section .card:hover {
+  transform: translateY(-8px);
+}
+
+.cards-section .card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.cards-section .card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.cards-section .cards-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.cards-section .cards-main-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: #FFC800;
+  color: #1a1a1a;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.cards-section .cards-main-button:hover {
+  background-color: #e0b000;
+  transform: translateY(-3px);
+}

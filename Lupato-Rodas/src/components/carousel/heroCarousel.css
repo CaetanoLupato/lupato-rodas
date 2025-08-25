@@ -1,0 +1,42 @@
+.hero-carousel-container {
+  width: 100vw;
+  height: 100vh; /* ou ajuste para 70vh se quiser menor */
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper, .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #FFD700;
+  font-size: 20px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(255, 255, 255, 0.5); /* cor das inativas */
+  width: 12px;
+  height: 12px;
+  opacity: 1; /* deixar visível mesmo inativa */
+  margin: 0 4px;
+  transition: background-color 0.3s ease;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #FFD700; /* cor da bolinha ativa */
+}
+
