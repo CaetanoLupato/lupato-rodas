@@ -1,0 +1,58 @@
+.diferenciais-section {
+  padding: 20px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.diferenciais-header h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.diferenciais-header p {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  font-style: italic;
+}
+
+.diferenciais-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 35px;
+  justify-content: center;
+}
+
+.diferencial-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  padding: 30px;
+  text-align: center;
+  width: 300px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.diferencial-card:hover {
+  transform: translateY(-10px);
+}
+.icon {
+  font-size: 35px;
+  margin-bottom: 15px;
+  color: #007bc2cc;
+}
+
+.diferencial-card h3 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.diferencial-card p {
+  font-size: 1.1rem;
+  color: #555;
+}

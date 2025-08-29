@@ -1,0 +1,34 @@
+.servico-hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.servico-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.servico-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.servico-hero-title {
+  color: #fff;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: -3rem;
+  color: #FFC800;
+  letter-spacing: 2px;
+}

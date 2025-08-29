@@ -1,0 +1,101 @@
+.etapas-section {
+  width: 100%;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.etapas-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.etapas-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Linha contínua até o final */
+.etapas-line {
+  position: absolute;
+  top: 25px; /* alinhada ao centro dos círculos */
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #ddd;
+  z-index: 1;
+}
+
+.etapas-step {
+  flex: 1;
+  position: relative;
+  padding: 0 15px;
+}
+
+.etapas-circle {
+  width: 62px;
+  height: 62px;
+  background: #ffc800; /* amarelo Lupato */
+  color: white;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 25px;
+  position: relative;
+  z-index: 2; /* ficar acima da linha */
+}
+
+/* Setas sobre a linha */
+.etapas-arrow {
+  position: absolute;
+  top: -8px; /* centraliza sobre a linha */
+  right: -10%;
+  font-size: 3.0rem;
+  color: #666;
+  z-index: 3;
+}
+
+.etapas-content {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  height: 260px; /* mais altura */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.etapas-img {
+  width: 100%;
+  height: 180px; /* mais altura na imagem */
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 900px) {
+  .etapas-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .etapas-line {
+    display: none;
+  }
+
+  .etapas-arrow {
+    display: none;
+  }
+
+  .etapas-step {
+    margin-bottom: 50px;
+  }
+}
