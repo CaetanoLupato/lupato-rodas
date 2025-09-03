@@ -18,7 +18,7 @@
   position: relative;
 }
 
-/* Linha contínua até o final */
+/* Linha base */
 .etapas-line {
   position: absolute;
   top: 25px; /* alinhada ao centro dos círculos */
@@ -27,18 +27,33 @@
   height: 4px;
   background: #ddd;
   z-index: 1;
+  overflow: hidden;
+}
+
+/* Linha animada de progresso */
+.etapas-line::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: var(--line-progress, 0);
+  background: #ffc800;
+  transition: width 0.4s ease;
+  z-index: 2;
 }
 
 .etapas-step {
   flex: 1;
   position: relative;
   padding: 0 15px;
+  text-align: center;
 }
 
 .etapas-circle {
   width: 62px;
   height: 62px;
-  background: #ffc800; /* amarelo Lupato */
+  background: #ffc800;
   color: white;
   font-weight: 700;
   border-radius: 50%;
@@ -48,33 +63,43 @@
   margin: 0 auto 20px;
   font-size: 25px;
   position: relative;
-  z-index: 2; /* ficar acima da linha */
+  z-index: 2;
 }
 
-/* Setas sobre a linha */
 .etapas-arrow {
   position: absolute;
-  top: -8px; /* centraliza sobre a linha */
+  top: -8px;
   right: -10%;
-  font-size: 3.0rem;
+  font-size: 3rem;
   color: #666;
   z-index: 3;
 }
 
+/* Estado inicial do card */
 .etapas-content {
   background: white;
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-  height: 260px; /* mais altura */
+  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+
+  /* Transição suave */
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.etapas-step:hover .etapas-content {
+  transform: translateY(-10px); /* eleva o card */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* sombra mais intensa */
+}
+
 
 .etapas-img {
   width: 100%;
-  height: 180px; /* mais altura na imagem */
+  height: 180px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 10px;
@@ -99,3 +124,4 @@
     margin-bottom: 50px;
   }
 }
+
