@@ -64,6 +64,13 @@
   font-size: 25px;
   position: relative;
   z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+}
+
+.etapas-step:hover .etapas-circle {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 200, 0, 0.7);
 }
 
 .etapas-arrow {
