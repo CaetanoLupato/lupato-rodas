@@ -33,7 +33,7 @@ const etapas = [
 ];
 
 export default function Etapas() {
-  // começa em -1 (nenhuma etapa ativa)
+  
   const [hoveredStep, setHoveredStep] = useState(-1);
 
   return (

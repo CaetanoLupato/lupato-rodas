@@ -4,6 +4,7 @@ import ServicoHero from "../../components/servicoHero/servicoHero";
 import ServicoContent from "../../components/servicoContent/servicoContent";
 import ServicoCards from "../../components/servicoCards/servicoCards";
 import Etapas from "../../components/servicoEtapas/etapas";
+import Review from "../../components/avaliacoes/reviews";   // <--- importamos aqui
 import Footer from "../../components/footer/footer";
 import heroImage from "../../assets/rodas-velhas.jpg";
 import heroImage2 from "../../assets/rodas-novas.jpg";
@@ -48,7 +49,7 @@ const comercioTopics = [
     title: "Comércio de Rodas",
     description: (
       <>
-        Além de nos destacarmos no recondicionamento de rodas, oferecemos também a venda de rodas novas e seminovas, garantindo qualidade e confiança em cada produto.
+        Além de nos destacarmos no recondicionamento de rodas, oferecemos também a venda de <span className="negrito">rodas novas</span> e <span className="negrito">seminovas</span>, garantindo qualidade e confiança em cada produto.
       </>
     )
   },
@@ -59,6 +60,23 @@ const comercioTopics = [
         Nossas rodas seminovas passam por um rigoroso processo de recondicionamento, onde são inspecionadas e tratadas, entregando a mesma segurança, resistência e confiabilidade de uma roda nova, mas com excelente custo-benefício.
       </>
     )
+  },
+  {
+    title: "Rodas Novas",
+    description: (
+      <>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sunt aut consequuntur, vel nostrum provident veritatis blanditiis excepturi, aliquam, accusamus asperiores cumque quis quod nesciunt laudantium. Ut modi facere quia?
+      </>
+    )
+  },
+
+  {
+    title: "Variações:",
+    description: [
+      "8,25x22,5;",
+      "9,00x22,5;",
+      "7,5x22,5;",  
+    ]
   }
 ];
 
@@ -77,7 +95,9 @@ function Servicos() {
       {/* Comércio */}
       <ServicoHero title="COMÉRCIO DE RODAS" image={heroImage2} />
       <ServicoContent topics={comercioTopics} image={heroImage2} />
+    
 
+      <Review />
       <Footer />
     </>
   );

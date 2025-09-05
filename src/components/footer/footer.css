@@ -7,7 +7,7 @@
 .footer-container {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* alinha os títulos pelo topo */
+  align-items: flex-start;
   flex-wrap: wrap;
   max-width: 1200px;
   margin: auto;
@@ -16,7 +16,7 @@
 
 .footer-section {
   flex: 1;
-  min-width: 220px; /* largura mínima */
+  min-width: 220px;
   padding: 0 10px;
 }
 

@@ -53,6 +53,11 @@
   color: #555;
 }
 
+.negrito {
+  font-weight: 700;
+  color: #ff0000;
+}
+
 .service-image {
   flex: 1;
   display: flex;

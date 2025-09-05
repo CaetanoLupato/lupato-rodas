@@ -18,10 +18,9 @@
   position: relative;
 }
 
-/* Linha base */
 .etapas-line {
   position: absolute;
-  top: 25px; /* alinhada ao centro dos círculos */
+  top: 25px;
   left: 0;
   right: 0;
   height: 4px;
@@ -30,7 +29,6 @@
   overflow: hidden;
 }
 
-/* Linha animada de progresso */
 .etapas-line::before {
   content: "";
   position: absolute;
@@ -82,7 +80,6 @@
   z-index: 3;
 }
 
-/* Estado inicial do card */
 .etapas-content {
   background: white;
   padding: 20px;
@@ -92,8 +89,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-
-  /* Transição suave */
+  
   transform: translateY(0);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -112,7 +108,6 @@
   margin-bottom: 10px;
 }
 
-/* Responsivo */
 @media (max-width: 900px) {
   .etapas-container {
     flex-direction: column;

@@ -7,14 +7,6 @@
   scroll-margin: 80px;
 }
 
-.linha {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 3rem;
-  gap: 2rem;
-}
-
 .coluna {
   flex: 1 1 45%;
   max-width: 600px;

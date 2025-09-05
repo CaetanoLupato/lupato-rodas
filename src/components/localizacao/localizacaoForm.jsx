@@ -12,7 +12,7 @@ export default function LocalizacaoForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const telefone = "5516981672009"; // Substitua pelo seu número com DDD (formato internacional sem +)
+    const telefone = "5516981672009";
     const texto = `*Novo contato pelo site!*%0A
 *Nome:* ${nome}%0A
 *Cidade/Estado:* ${cidadeEstado}%0A
@@ -89,8 +89,7 @@ export default function LocalizacaoForm() {
           <button type="submit">Enviar formulário</button>
         </form>
       </div>
-
-      {/* MAPA */}
+      
       <div className="map-section">
         <iframe
           title="Mapa Lupato Rodas"

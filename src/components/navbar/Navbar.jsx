@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { HashLink as Link } from "react-router-hash-link"; // <-- Import HashLink
 import './navbar.css';
 import logo from '../../assets/logo.png';
 
@@ -9,23 +9,47 @@ function Navbar() {
     return (
         <header className="navbar-container">
             <div className="navbar-logo">
-                <Link to="/">
+                <Link to="/" onClick={() => setMenuOpen(false)}>
                     <img src={logo} alt="Logo Lupato Rodas" />
                 </Link>
             </div>
 
             <nav className={`navbar-links ${menuOpen ? "active" : ""}`}>
                 <ul>
-                    <li><a href="#inicio" onClick={() => setMenuOpen(false)}>Início</a></li>
-                    <li><a href="#sobre" onClick={() => setMenuOpen(false)}>Sobre Nós</a></li>
-                    <li><a href="servicos" onClick={() => setMenuOpen(false)}>Serviços</a></li>
-                
-                    <li><a href="/" onClick={() => setMenuOpen(false)}>Produtos</a></li>
-                    <li><a href="#localizacao" onClick={() => setMenuOpen(false)}>Como chegar</a></li>
+                    {/* Links para seções da página inicial */}
+                    <li>
+                        <Link smooth to="/#inicio" onClick={() => setMenuOpen(false)}>
+                            Início
+                        </Link>
+                    </li>
+                    <li>
+                        <Link smooth to="/#sobre" onClick={() => setMenuOpen(false)}>
+                            Sobre Nós
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/servicos" onClick={() => {setMenuOpen(false);
+                            window.scrollTo({top: 0, behavior: 'smooth'});
+                        }}
+                        >
+                            Serviços
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/produtos" onClick={() => setMenuOpen(false)}>
+                            Produtos
+                        </Link>
+                    </li>
+                    <li>
+                        <Link smooth to="/#localizacao" onClick={() => setMenuOpen(false)}>
+                            Como Chegar
+                        </Link>
+                    </li>
                 </ul>
             </nav>
+
+            {/* Menu hamburguer */}
             <div 
-            
                 className={`menu-icon ${menuOpen ? "open" : ""}`} 
                 onClick={() => setMenuOpen(!menuOpen)}
             >

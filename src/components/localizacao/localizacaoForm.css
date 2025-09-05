@@ -42,19 +42,18 @@
 
 .localizacao-wrapper .form-header h2 {
   font-size: 25px;
-  margin-bottom: 2px; /* aproxima do subtítulo */
+  margin-bottom: 2px;
 }
 
 .localizacao-wrapper .form-header p {
   color: #666;
   font-size: 20px;
-  margin-top: 0; /* remove espaço extra */
+  margin-top: 0;
 }
 
-/* afasta a próxima seção de conteúdo */
 .localizacao-wrapper .form-section > h3,
 .localizacao-wrapper .form-section > p {
-  margin-top: 25px; /* desce "Ficou com alguma dúvida?" */
+  margin-top: 25px;
 }
 
 .localizacao-wrapper p {
@@ -77,7 +76,7 @@
 
 .localizacao-wrapper .input-group input {
   width: 100%;
-  padding: 10px 10px 10px 38px; /* espaço para ícone */
+  padding: 10px 10px 10px 38px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 14px;
@@ -85,7 +84,7 @@
 
 .localizacao-wrapper .input-group textarea {
   width: 100%;
-  padding: 10px 12px; /* padding normal */
+  padding: 10px 12px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 14px;
@@ -131,7 +130,7 @@
 }
 
 .localizacao-wrapper .input-row .input-group {
-  flex: 1; /* garante largura igual para os dois campos */
+  flex: 1;
 }
 
 .localizacao-wrapper .input-row .input-group input {
