@@ -80,23 +80,19 @@ const comercioTopics = [
   }
 ];
 
-
 function Servicos() {
   return (
     <>
       <Navbar />
 
-      {/* Recondicionamento */}
       <ServicoHero title="RECONDICIONAMENTO DE RODAS" image={heroImage} />
       <ServicoContent topics={topics} image={heroImage} />
       <ServicoCards title="LINHAS QUE ATENDEMOS" items={linhaAtendemos} />
       <Etapas />
 
-      {/* Comércio */}
       <ServicoHero title="COMÉRCIO DE RODAS" image={heroImage2} />
       <ServicoContent topics={comercioTopics} image={heroImage2} />
     
-
       <Review />
       <Footer />
     </>

@@ -10,6 +10,7 @@ import LocalizacaoForm from './components/localizacao/localizacaoForm';
 import Produtos from './pages/produtos/produtos';
 import Servicos from './pages/servicos/servicos';
 import Footer from './components/footer/footer';
+import Review from './components/avaliacoes/reviews';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
                 <Cards /> 
                 <Sobre />
                 <Diferenciais />
+                <Review />
                 <LocalizacaoForm />
                 <Footer />
               </>

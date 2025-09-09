@@ -50,7 +50,6 @@
   color: #0F71AA;
 }
 
-
 .menu-icon {
   width: 30px;
   height: 22px;
@@ -112,7 +111,7 @@
     width: 100%;
     text-align: center;
     padding: 0.8rem 0;
-  }
+  } 
 
   .navbar-links a {
     display: block;

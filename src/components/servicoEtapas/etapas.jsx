@@ -24,6 +24,7 @@ const etapas = [
     desc: "As rodas que passam no processo são totalmente recondicionadas e revisadas.",
     image: image2,
   },
+  
   {
     id: 4,
     title: "Finalização",
@@ -51,6 +52,7 @@ export default function Etapas() {
                 ? `${((hoveredStep + 1) / etapas.length) * 100}%`
                 : "0%",
           }}
+
         ></div>
 
         {etapas.map((etapa) => (

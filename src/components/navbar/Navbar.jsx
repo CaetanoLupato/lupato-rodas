@@ -16,7 +16,7 @@ function Navbar() {
 
             <nav className={`navbar-links ${menuOpen ? "active" : ""}`}>
                 <ul>
-                    {/* Links para seções da página inicial */}
+                    
                     <li>
                         <Link smooth to="/#inicio" onClick={() => setMenuOpen(false)}>
                             Início
@@ -48,7 +48,6 @@ function Navbar() {
                 </ul>
             </nav>
 
-            {/* Menu hamburguer */}
             <div 
                 className={`menu-icon ${menuOpen ? "open" : ""}`} 
                 onClick={() => setMenuOpen(!menuOpen)}
