@@ -3,32 +3,48 @@
   width: 100%;
   height: 60vh;
   overflow: hidden;
+  /* Para suavizar a transição caso a imagem mude */
+  transition: background-color 0.3s ease;
 }
 
 .servico-hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block; /* remove espaços em branco abaixo da imagem */
+  user-select: none;
+  pointer-events: none; /* evita interação desnecessária */
 }
 
 .servico-hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0; /* shorthand para top:0; left:0; right:0; bottom:0; */
   background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem; /* para evitar que o texto encoste nas bordas em telas pequenas */
+  text-align: center;
 }
 
 .servico-hero-title {
-  color: #fff;
-  font-size: 3rem;
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: -3rem;
   color: #FFC800;
+  font-size: clamp(2rem, 5vw, 3rem); /* responsivo entre 2rem e 3rem */
+  font-weight: 700;
   letter-spacing: 2px;
+  margin: 0; 
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7); /* melhora legibilidade sobre a imagem */
+  user-select: none;
+}
+
+@media (max-width: 480px) {
+  .servico-hero {
+    height: 40vh;
+  }
+
+  .servico-hero-title {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    padding: 0 0.5rem;
+  }
 }

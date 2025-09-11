@@ -34,6 +34,7 @@ function App() {
             }
           />
           <Route path="/Servicos" element={<Servicos />} />
+          <Route path="/Produtos" element={<Produtos />} />
         </Routes>
       </div>
     </Router>

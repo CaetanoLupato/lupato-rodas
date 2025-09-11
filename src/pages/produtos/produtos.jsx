@@ -1,12 +1,19 @@
-import React from 'react';
+import React from "react";
+import Navbar from "../../components/navbar/Navbar";
+import Catalogo from "../../components/prodCatalogo/catalogo";
+import Footer from "../../components/footer/footer";
 
-const produtos = () => {
+function Produtos() {
   return (
-    <div style={{ padding: '2rem' }}>
-      <h1>Produtos</h1>
-      <p>Aqui você encontra todos os serviços oferecidos pela nossa empresa.</p>
-    </div>
+    <>
+      <Navbar />
+      <h1 style={{ textAlign: "center", margin: "20px 0" }}>
+        Catálogo de Rodas
+      </h1>
+      <Catalogo />
+      <Footer />
+    </>
   );
-};
+}
 
-export default produtos;
+export default Produtos;
