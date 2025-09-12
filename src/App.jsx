@@ -7,7 +7,6 @@ import Cards from './components/cards/cards';
 import Sobre from './components/sobre/sobre';
 import Diferenciais from './components/diferenciais/Diferenciais';
 import LocalizacaoForm from './components/localizacao/localizacaoForm';
-import Produtos from './pages/produtos/produtos';
 import Servicos from './pages/servicos/servicos';
 import Footer from './components/footer/footer';
 import Review from './components/avaliacoes/reviews';
@@ -34,7 +33,6 @@ function App() {
             }
           />
           <Route path="/Servicos" element={<Servicos />} />
-          <Route path="/Produtos" element={<Produtos />} />
         </Routes>
       </div>
     </Router>

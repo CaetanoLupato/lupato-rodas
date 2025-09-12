@@ -36,11 +36,6 @@ function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/produtos" onClick={() => setMenuOpen(false)}>
-                            Produtos
-                        </Link>
-                    </li>
-                    <li>
                         <Link smooth to="/#localizacao" onClick={() => setMenuOpen(false)}>
                             Como Chegar
                         </Link>

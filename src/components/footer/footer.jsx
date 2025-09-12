@@ -25,7 +25,6 @@ const Footer = () => {
           <ul>
             <li><a href="#inicio">Início</a></li>
             <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="produtos">Produtos</a></li> 
             <li><a href="#cards">Serviços</a></li>
             <li><a href="#localizacao">Como chegar</a></li>
           </ul>

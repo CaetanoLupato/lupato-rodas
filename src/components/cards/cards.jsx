@@ -12,7 +12,7 @@ const Cards = () => {
                 </div>
                 <div className="card">
                     <h3>Rodas Novas</h3>
-                    <p>Oferecemos uma ampla variedade de rodas novas das principais marcas do mercado!</p>
+                    <p>Oferecemos uma ampla variedade de rodas novas de extrema qualidade.</p>
                 </div>
                 <div className="card">
                     <h3>Rodas Seminovas</h3>
