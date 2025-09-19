@@ -14,7 +14,7 @@ const Sobre = () => {
           <h2>Nossa História</h2>
           <p>
             Tradição que gira com o tempo!
-Há quatro gerações, a família Lupato recondiciona rodas com qualidade, confiança e tecnologia. De rodas de carroça às mais modernas sem câmara, evoluímos com o tempo para oferecer sempre o melhor. Qualidade de verdade tem história!
+        Há cinco gerações, a família Lupato recondiciona rodas com qualidade, confiança e tecnologia. Desde as rodas de carroça às mais modernas, evoluímos com o tempo para oferecer sempre o melhor. Qualidade de verdade tem história!
           </p>
           <p>
             Cada roda que passa por nossas mãos carrega uma história — a sua. Por isso, cuidamos de cada detalhe, aplicando tecnologia de ponta e a dedicação que só quem tem tradição entende.
@@ -27,11 +27,10 @@ Do pequeno produtor rural ao grande transportador, todos recebem o mesmo cuidado
         <div className="coluna texto">
           <h2>A Lupato Rodas</h2>
           <p>
-            Na Lupato Rodas, cada detalhe importa. Somos especialistas na recuperação e venda de rodas e aros para caminhões, transbordos, máquinas agrícolas, tratores e empilhadeiras — novas, usadas ou revisadas. Nossa estrutura conta com linha de produção completa, equipamentos de ponta e processos que garantem eficiência tanto na restauração quanto na fabricação sob medida, inclusive para modelos fora de padrão.
-
-Com uma frota própria de caminhões, atendemos Ribeirão Preto e região com agilidade: trabalhamos com sistema de troca rápida, entregando e recolhendo no mesmo serviço, para que o cliente ganhe tempo e confiança.
+            Reconhecida pela qualidade, tradição e respeito ao cliente, a Lupato Rodas atua no mercado de rodas e aros para caminhões, transbordos, tratores, máquinas agrícolas e diferentes segmentos do transporte e agronegócio. Somos especialistas em recuperação e venda de rodas novas, usadas e recondicionadas, sempre com foco em eficiência, segurança e durabilidade.
+            Com frota própria e sistema de troca rápida, atendemos Ribeirão Preto e região garantindo confiança e agilidade.</p> 
+            <p>Nossa missão é oferecer soluções que unam desempenho e segurança, fortalecendo parcerias e contribuindo para o crescimento dos negócios de nossos clientes.
           </p>
-          <p>Reconhecida e respeitada por sua atuação no mercado, visa sempre a melhoria contínua de seus processos de serviços, resultando na completa satisfação de seus clientes e a constante ampliação de seus negócios.</p>
         </div>
         <div className="coluna imagem">
           <img src={sobreImg2} alt="Fachada" />
@@ -42,3 +41,4 @@ Com uma frota própria de caminhões, atendemos Ribeirão Preto e região com ag
 };
 
 export default Sobre;
+

@@ -1,5 +1,6 @@
 import React from "react";
 import { FaInstagram, FaFacebookF, FaCommentDots, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import { HashLink as Link } from "react-router-hash-link"; // <-- Importa igual na Navbar
 import "./Footer.css";
 
 const Footer = () => {
@@ -10,7 +11,7 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Lupato Rodas</h3>
           <p className="footer-text">
-            Há cinco gerações recuperando rodas com excelência e dedicação. Qualidade, agilidade e segurança são nossos maiores compromissos.
+            Há cinco gerações oferecendo soluções em rodas com experiência e confiança. Nosso compromisso é garantir sempre qualidade, rapidez e segurança em cada serviço.
           </p>
           <h3 className="footer-title redes-sociais">Redes Sociais</h3>
           <div className="social-icons">
@@ -23,10 +24,17 @@ const Footer = () => {
         <div className="footer-section">
           <h3 className="footer-title">Empresa</h3>
           <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre Nós</a></li>
-            <li><a href="#cards">Serviços</a></li>
-            <li><a href="#localizacao">Como chegar</a></li>
+            <li><Link smooth to="/#inicio">Início</Link></li>
+            <li><Link smooth to="/#sobre">Sobre Nós</Link></li>
+            <li>
+              <Link 
+                to="/servicos" 
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Serviços
+              </Link>
+            </li>
+            <li><Link smooth to="/#localizacao">Como chegar</Link></li>
           </ul>
         </div>
 

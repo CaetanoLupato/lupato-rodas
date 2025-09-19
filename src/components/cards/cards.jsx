@@ -8,20 +8,21 @@ const Cards = () => {
             <div className="cards-container">
                 <div className="card">
                     <h3>Recondicionamento de Rodas</h3>
-                    <p>Sua roda sofreu danos? A gente resolve! Reparos com segurança e confiabilidade.</p>
+                    <p>Problemas com suas rodas? Restauramos com qualidade e segurança, deixando como novas!</p>
                 </div>
                 <div className="card">
                     <h3>Rodas Novas</h3>
-                    <p>Oferecemos uma ampla variedade de rodas novas de extrema qualidade.</p>
+                    <p>Trabalhamos com a venda de rodas novas de alto padrão, oferecendo um produto de qualidade e confiança.</p>
                 </div>
                 <div className="card">
                     <h3>Rodas Seminovas</h3>
-                    <p>Quer economizar sem abrir mão da qualidade? Confira nossas rodas seminovas com garantia!</p>
+                    <p>Quer economizar sem abrir mão da qualidade e segurança? Confira nossas rodas seminovas!</p>
                 </div>
             </div>
 
             <div className="cards-button-container">
-                <a href="/servicos" className="cards-main-button">Ver mais sobre    </a>
+                <a href="/ser
+                vicos" className="cards-main-button">Ver mais</a>
             </div>
         </section>
     );

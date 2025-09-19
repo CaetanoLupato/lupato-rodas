@@ -7,7 +7,7 @@ const Diferenciais = () => {
     {
       icon: <FaChartLine />,
       title: "Controle de QUALIDADE",
-      text: "Gerido pelo nosso sistema de Gestão de Qualidade, seguimos princípios que orientam todas as nossas atividades."
+      text: "Gerido pelo nosso sistema de gestão de qualidade, seguimos princípios que orientam todas as nossas atividades."
     },
     {
       icon: <FaCheckCircle />,
