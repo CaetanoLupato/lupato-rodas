@@ -1,7 +1,6 @@
 import React from "react";
 import "./review.css";
 
-// import das imagens dos clientes
 import cliente1 from "../../assets/clientes/cliente1.png";
 import M from "../../assets/clientes/M.jpg";
 
@@ -25,19 +24,28 @@ const reviews = [
   },
   {
     id: 3,
-    nome: "Marina Costa",
-    cargo: "Coordenadora de TI • SoftSolutions",
+    nome: "Gilvania Araújo",
+    cargo: "",
     comentario:
-      "Soluções inovadoras e suporte ágil. Eles não apenas entregaram o que prometeram, mas foram além, trazendo insights valiosos que melhoraram nossos processos internos.",
+      "Ótimo atendimento, produto de qualidade.",
     estrelas: 5,
     imagem: "https://i.pravatar.cc/80?img=7",
   },
   {
     id: 4,
-    nome: "Ana Paula",
-    cargo: "Diretora de Marketing • VisionX",
+    nome: "Gilberto Junior",
+    cargo: "",
     comentario:
-      "Atendimento excepcional! Sempre dispostos a ajudar e propor novas ideias. Com certeza uma parceria de longo prazo.",
+      "Ótimos profissionais e qualidade do produto é certeza",
+    estrelas: 5,
+    imagem: "https://i.pravatar.cc/80?img=10",
+  },
+  {
+    id: 4,
+    nome: "Pedro Bufalo",
+    cargo: "",
+    comentario:
+      "Exelente atendimento pessoal qualificado.",
     estrelas: 5,
     imagem: "https://i.pravatar.cc/80?img=10",
   },

@@ -17,7 +17,7 @@ const Sobre = () => {
         Há cinco gerações, a família Lupato recondiciona rodas com qualidade, confiança e tecnologia. Desde as rodas de carroça às mais modernas, evoluímos com o tempo para oferecer sempre o melhor. Qualidade de verdade tem história!
           </p>
           <p>
-            Cada roda que passa por nossas mãos carrega uma história — a sua. Por isso, cuidamos de cada detalhe, aplicando tecnologia de ponta e a dedicação que só quem tem tradição entende.
+            Cada roda que passa por nossas mãos carrega uma história, a sua. Por isso, cuidamos de cada detalhe, aplicando tecnologia de ponta e a dedicação que só quem tem tradição entende.
 Do pequeno produtor rural ao grande transportador, todos recebem o mesmo cuidado: a certeza de que sua roda vai girar mais, melhor e com total segurança. Porque para nós, rodar é mais do que movimento: é confiança em cada quilômetro.
           </p>
         </div>

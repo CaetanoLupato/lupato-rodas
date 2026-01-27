@@ -28,7 +28,7 @@ const etapas = [
   {
     id: 4,
     title: "Finalização",
-    desc: "Após a revisão, as rodas são pintadas e ficam prontas para retorno ao mercado.",
+    desc: "Após a revisão, as rodas são pintadas e ficam prontas para retornar ao cliente",
     image: image3,
   },
 ];

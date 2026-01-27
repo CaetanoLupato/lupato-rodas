@@ -32,7 +32,7 @@ function App() {
               </>
             }
           />
-          <Route path="/Servicos" element={<Servicos />} />
+          <Route path="/servicos" element={<Servicos />} />
         </Routes>
       </div>
     </Router>

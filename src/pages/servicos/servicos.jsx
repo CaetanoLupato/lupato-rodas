@@ -65,19 +65,10 @@ const comercioTopics = [
     title: "Rodas Novas",
     description: (
       <>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam sunt aut consequuntur, vel nostrum provident veritatis blanditiis excepturi, aliquam, accusamus asperiores cumque quis quod nesciunt laudantium. Ut modi facere quia?
+       Trabalhamos com a venda de rodas e aros novos, nacionais e importados, para caminhões, máquinas agrícolas, tratores e empilhadeiras, atendendo as mais diversas necessidades do setor e garantindo qualidade, resistência e confiança em cada produto. 
       </>
     )
   },
-
-  {
-    title: "Variações:",
-    description: [
-      "8,25x22,5;",
-      "9,00x22,5;",
-      "7,5x22,5;",  
-    ]
-  }
 ];
 
 function Servicos() {
