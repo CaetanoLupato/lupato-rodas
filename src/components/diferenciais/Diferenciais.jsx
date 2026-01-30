@@ -6,22 +6,22 @@ const Diferenciais = () => {
   const cards = [
     {
       icon: <FaChartLine />,
-      title: "Controle de QUALIDADE",
+      title: "CONTROLE DE QUALIDADE",
       text: "Gerido pelo nosso sistema de gestão de qualidade, seguimos princípios que orientam todas as nossas atividades."
     },
     {
       icon: <FaCheckCircle />,
-      title: "Eficiência CONSTANTE",
+      title: "EFICIÊNCIA CONSTANTE",
       text: "Atuamos com precisão na recuperação e venda de rodas e aros para caminhões, máquinas, tratores e empilhadeiras."
     },
     {
       icon: <FaUsers />,
-      title: "Nossos VALORES",
+      title: "NOSSOS VALORES",
       text: "Respeito, comprometimento, profissionalismo, honestidade, responsabilidade, integridade e excelência."
     },
     {
       icon: <FaCogs />,
-      title: "Equipe ESPECIALIZADA",
+      title: "EQUIPE ESPECIALIZADA",
       text: "Profissionais qualificados para entender sua necessidade e oferecer a melhor solução para cada caso."
     }
   ];
@@ -31,8 +31,8 @@ const Diferenciais = () => {
       <div className="diferenciais-header">
         <h2>Por que trabalhar com a gente?</h2>
         <p>
-          Contando com uma frota de 3 caminhões atendemos Ribeirão e região, 
-          trabalhamos com o sistema à base de troca, já levando a mercadoria 
+          Contando com uma frota de 3 caminhões, atendemos Ribeirão e região. 
+          Trabalhamos com o sistema à base de troca, já levando a mercadoria 
           e o serviço com extrema rapidez e eficiência.
 
         </p>
