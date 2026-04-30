@@ -7,6 +7,7 @@ function ServicoHero({ title, image }) {
       <img src={image} alt={title} className="servico-hero-image" />
       <div className="servico-hero-overlay">
         <h1 className="servico-hero-title">{title}</h1>
+        <div className="servico-hero-bar"></div>
       </div>
     </section>
   );

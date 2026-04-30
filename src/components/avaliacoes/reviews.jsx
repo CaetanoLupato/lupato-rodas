@@ -1,101 +1,54 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./review.css";
 
 import cliente1 from "../../assets/clientes/cliente1.png";
 import M from "../../assets/clientes/M.jpg";
+import D from "../../assets/clientes/D.png";
+import Guilherme from "../../assets/clientes/Guilherme.png";
 
 const reviews = [
-  {
-    id: 1,
-    nome: "Leirison Marcel Garbin",
-    cargo: "",
-    comentario:
-      "Encontra-se tudo em rodas agricolas, rodoviarias e linha amarela.",
-    estrelas: 5,
-    imagem: cliente1,
-  },
-  {
-    id: 2,
-    nome: "Moacir Galvao",
-    cargo: "",
-    comentario: "Uma empresa focada na solução em rodas grandes ou pequenas ..leve sua nessecidade a eles e juntos acharão uma solução com preços dentro de um parâmetro adequado....não sei da idade da empresa ...mas conhecem muito sobre rodas....pode confiar",
-    estrelas: 5,
-    imagem: M,
-  },
-  {
-    id: 3,
-    nome: "Gilvania Araújo",
-    cargo: "",
-    comentario:
-      "Ótimo atendimento, produto de qualidade.",
-    estrelas: 5,
-    imagem: "https://i.pravatar.cc/80?img=7",
-  },
-  {
-    id: 4,
-    nome: "Gilberto Junior",
-    cargo: "",
-    comentario:
-      "Ótimos profissionais e qualidade do produto é certeza",
-    estrelas: 5,
-    imagem: "https://i.pravatar.cc/80?img=10",
-  },
-  {
-    id: 4,
-    nome: "Pedro Bufalo",
-    cargo: "",
-    comentario:
-      "Exelente atendimento pessoal qualificado.",
-    estrelas: 5,
-    imagem: "https://i.pravatar.cc/80?img=10",
-  },
+  { id: 1, nome: "Leirison Marcel Garbin", comentario: "Encontra-se tudo em rodas agrícolas, rodoviárias e linha amarela. Excelente empresa!", estrelas: 5, imagem: cliente1 },
+  { id: 2, nome: "Moacir Galvão", comentario: "Uma empresa focada na solução em rodas grandes ou pequenas. Levei minha necessidade a eles e juntos achamos uma solução com preços adequados. Pode confiar!", estrelas: 5, imagem: M },
+  { id: 3, nome: "Daniel Dorazzi", comentario: "Recomendo a empresa, serviço com qualidade e atendimento top!", estrelas: 5, imagem: D },
+  { id: 4, nome: "Álvaro Oliveira", comentario: "Recomendo! Ótimo atendimento e muita qualidade no serviço.", estrelas: 5, imagem: cliente1 },
+  { id: 5, nome: "Guilherme Gouveia", comentario: "Atendimento e serviço excelentes. Recomendo sem hesitar.", estrelas: 5, imagem: Guilherme },
 ];
 
-const renderStars = (qtd) => {
-  return Array.from({ length: 5 }, (_, i) => (
-    <span key={i} className={`star ${i < qtd ? "filled" : ""}`}>
-      ★
-    </span>
+const renderStars = (qty) =>
+  Array.from({ length: 5 }, (_, i) => (
+    <span key={i} className={`star${i < qty ? " filled" : ""}`}>★</span>
   ));
-};
 
-function Review({ speed = 30, direction = "left" }) {
+function Review({ speed = 32 }) {
   return (
     <section className="reviews-section">
-      <h2 className="reviews-title">Avaliações de Clientes</h2>
+      <motion.div
+        className="reviews-header"
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        viewport={{ once: true, amount: 0.4 }}
+      >
+        <p className="reviews-label">Depoimentos</p>
+        <div className="reviews-divider"></div>
+        <h2 className="reviews-title">O que nossos clientes dizem</h2>
+      </motion.div>
 
       <div className="reviews-container">
         <div
-          className={`reviews-track ${direction}`}
-          style={{
-            animationDuration: `${speed}s`,
-            animationDirection: direction === "right" ? "reverse" : "normal",
-          }}
+          className="reviews-track"
+          style={{ animationDuration: `${speed}s` }}
         >
-
-          {reviews.map((review) => (
-            <div key={`first-${review.id}`} className="review-card">
-              <div className="review-stars">{renderStars(review.estrelas)}</div>
-              <p className="review-text">"{review.comentario}"</p>
+          {[...reviews, ...reviews].map((r, i) => (
+            <div key={i} className="review-card">
+              <div className="review-stars">{renderStars(r.estrelas)}</div>
+              <p className="review-text">"{r.comentario}"</p>
               <div className="review-user">
-                <img src={review.imagem} alt={review.nome} />
+                <img src={r.imagem} alt={r.nome} />
                 <div>
-                  <h4>{review.nome}</h4>
-                  <span>{review.cargo}</span>
-                </div>
-              </div>
-            </div>
-          ))}
-
-          {reviews.map((review) => (
-            <div key={`second-${review.id}`} className="review-card">
-              <div className="review-stars">{renderStars(review.estrelas)}</div>
-              <p className="review-text">"{review.comentario}"</p>
-              <div className="review-user">
-                <img src={review.imagem} alt={review.nome} />
-                <div>
-                  <h4>{review.nome}</h4>
-                  <span>{review.cargo}</span>
+                  <h4>{r.nome}</h4>
+                  <span>Cliente verificado</span>
                 </div>
               </div>
             </div>

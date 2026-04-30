@@ -1,23 +1,41 @@
 .sobre-container {
-  padding: 4rem 2rem;
-  padding-bottom: 1px;
-  background-color: #f8f8f8;
-  color: #333;
-  border-bottom: 1px solid #ddd;
-  scroll-margin: 80px;
+  padding: 6rem 2rem;
+  background-color: var(--white);
+  scroll-margin-top: var(--navbar-h);
+}
+
+.sobre-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.linha {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+.linha.reverse {
+  flex-direction: row-reverse;
 }
 
 .coluna {
-  flex: 1 1 45%;
-  max-width: 600px;
+  flex: 1 1 340px;
 }
 
 .coluna.imagem img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: var(--radius);
   object-fit: cover;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-height: 400px;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition);
 }
+.coluna.imagem img:hover { transform: scale(1.02); }
 
 .coluna.texto {
   display: flex;
@@ -25,45 +43,55 @@
   justify-content: center;
 }
 
+.sobre-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
 .coluna.texto h2 {
-  font-size: 2rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--dark);
+  line-height: 1.1;
+  margin-bottom: 1.25rem;
+}
+
+.coluna.texto h2 span { color: var(--gold); }
+
+.coluna.texto p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--gray);
   margin-bottom: 1rem;
 }
 
-.coluna.texto p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 1rem;
+.sobre-divider {
+  width: 48px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
 }
 
 @media (max-width: 768px) {
-  .linha {
+  .sobre-container { padding: 4rem 1.25rem; }
+  .sobre-inner { gap: 3.5rem; }
+
+  .linha,
+  .linha.reverse {
     flex-direction: column;
-    align-items: center;
+    gap: 2rem;
   }
 
-  .coluna {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
+  .coluna { flex: 1 1 100%; }
 
-  .coluna.imagem {
-    order: -1;
-  }
+  .coluna.imagem img { max-height: 260px; }
 
-  .coluna.imagem img {
-    max-height: 250px;
-  }
-
-  .coluna.texto h2 {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .coluna.texto p {
-    font-size: 1rem;
-    text-align: center;
-  }
+  .coluna.texto h2 { font-size: 1.75rem; }
 }
-
-

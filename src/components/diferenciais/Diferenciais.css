@@ -1,58 +1,108 @@
 .diferenciais-section {
-  padding: 20px 20px;
-  background-color: #f9f9f9;
+  padding: 5rem 2rem;
+  background-color: var(--gray-light);
   text-align: center;
-  border-bottom: 1px solid #ddd;
+}
+
+.diferenciais-header {
+  max-width: 680px;
+  margin: 0 auto 3.5rem;
+}
+
+.diferenciais-label {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.diferenciais-divider {
+  width: 48px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 0.75rem auto 1.25rem;
 }
 
 .diferenciais-header h2 {
-  font-size: 28px;
-  color: #1a1a1a;
-  margin-bottom: 10px;
-  margin-bottom: 25px;
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 900;
+  color: var(--dark);
+  margin-bottom: 0.75rem;
 }
 
 .diferenciais-header p {
-  font-size: 18px;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 40px auto;
+  font-size: 1.05rem;
+  color: var(--gray);
   font-style: italic;
+  line-height: 1.65;
 }
 
 .diferenciais-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 35px;
+  gap: 1.5rem;
   justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
 .diferencial-card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  padding: 30px;
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2.25rem 1.75rem;
+  width: clamp(220px, 22%, 280px);
+  flex: 1 1 220px;
   text-align: center;
-  width: 300px;
-  transition: transform 0.2s ease-in-out;
+  border-bottom: 3px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
 }
 
 .diferencial-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--gold);
 }
-.icon {
-  font-size: 35px;
-  margin-bottom: 15px;
-  color: #007bc2cc;
+
+.diferencial-card .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(246,195,10,0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.25rem;
+  font-size: 1.6rem;
+  color: var(--dark);
+  transition: background var(--transition), color var(--transition);
+}
+
+.diferencial-card:hover .icon {
+  background: var(--gold);
+  color: var(--dark);
 }
 
 .diferencial-card h3 {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+  letter-spacing: 0.3px;
 }
 
 .diferencial-card p {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .diferencial-card { flex: 1 1 100%; width: 100%; }
 }

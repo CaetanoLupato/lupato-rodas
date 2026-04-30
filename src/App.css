@@ -1,3 +1,2 @@
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
+.App { overflow-x: hidden; }

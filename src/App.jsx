@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/navbar/Navbar';
 import HeroCarousel from './components/carousel/heroCarousel';
 import Cards from './components/cards/cards';
+import Stats from './components/stats/stats';
 import Sobre from './components/sobre/sobre';
 import Diferenciais from './components/diferenciais/Diferenciais';
 import LocalizacaoForm from './components/localizacao/localizacaoForm';
@@ -23,8 +24,9 @@ function App() {
             element={
               <>
                 <HeroCarousel />
-                <Cards /> 
+                <Cards />
                 <Sobre />
+                <Stats />
                 <Diferenciais />
                 <Review />
                 <LocalizacaoForm />
