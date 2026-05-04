@@ -6,7 +6,7 @@ Este arquivo contém o histórico de decisões, estado atual e próximos passos 
 
 ## Sobre o Projeto
 
-Site institucional da **Lupato Rodas** — empresa familiar com 5 gerações de tradição em recondicionamento e venda de rodas para caminhões, máquinas agrícolas, tratores e empilhadeiras. Localizada em Ribeirão Preto, SP.
+Site institucional da **Lupato Rodas** — empresa familiar com 5 gerações de tradição em recondicionamento e venda de rodas para caminhões, máquinas agrícolas, tratores e empilhadeiras e outros. Localizada em Ribeirão Preto, SP.
 
 **Stack:** React + Vite  
 **Bibliotecas em uso:** react-router-dom, react-router-hash-link, swiper, react-icons, framer-motion
@@ -41,9 +41,9 @@ src/
 
 ---
 
-## Paleta de Cores Atual ✅ Aprovada
+## Paleta de Cores Atual
 
-Baseada nas cores do Instagram do cliente (#f6c30a, #242424, #ffffff) e referências visuais (Cris Rodas, Notion, Loom).
+Baseada nas cores (#f6c30a, #242424, #ffffff) e referências visuais (Cris Rodas, Notion, Loom).
 
 ```css
 --gold: #f6c30a
@@ -55,11 +55,10 @@ Baseada nas cores do Instagram do cliente (#f6c30a, #242424, #ffffff) e referên
 --white: #ffffff
 ```
 
-> O azul foi **removido completamente** do projeto. O ouro é o único brand color de destaque.
 
 ---
 
-## Fontes Atuais ✅ Aprovadas (Opção A)
+## Fontes Atuais
 
 - Display/títulos: `Plus Jakarta Sans` (400, 500, 600, 700, 800)
 - Body/texto corrido: `Inter` (300, 400, 500, 600, 700)
@@ -68,45 +67,13 @@ Baseada nas cores do Instagram do cliente (#f6c30a, #242424, #ffffff) e referên
 
 ---
 
-## Padrão de Hover dos Botões ✅ Definido
-
-Todos os botões CTA seguem o mesmo padrão de hover:
-- **Normal:** fundo dourado + texto escuro
-- **Hover:** fundo escuro + texto dourado (inversão)
-
-Aplicado em: navbar CTA, botão "Conheça nossos serviços", botão de envio do formulário.
-
----
-
-## Estado Atual — O que foi feito
-
-### Concluído
-- ✅ Design tokens no `index.css` (paleta + fontes atualizadas)
-- ✅ Navbar com blur (`backdrop-filter`), menu hamburguer funcional, hover com outline dourado no CTA
-- ✅ Carousel responsivo
-- ✅ Seção Sobre com animações laterais (framer-motion)
-- ✅ Cards "Soluções Lupato" — emojis substituídos por react-icons, fundo azul removido, animação stagger
-- ✅ Diferenciais com hover animado e stagger de entrada
-- ✅ Carrossel de avaliações com scroll automático e fade lateral
-- ✅ Formulário de localização + mapa, hover do botão atualizado
-- ✅ Footer reestruturado
-- ✅ Seção "Entenda nosso Processo" (Etapas) **removida** da página de Serviços
-- ✅ Coloração azulada removida dos heroes da página de Serviços
-- ✅ Animações de scroll (framer-motion whileInView) aplicadas em: Sobre, Diferenciais, Soluções Lupato, Depoimentos
-- ✅ Diferenciais — cards sobem juntos simultaneamente (sem stagger)
-- ✅ Paleta e fontes aprovadas pelo cliente (Plus Jakarta Sans + Inter, ouro/preto/branco)
-
----
-
 ## Pendências — Home
 
 | Item | Status | Observação |
 |------|--------|------------|
 | Seção "Sobre Nós" — conteúdo | ⏳ Futuramente | Adicionar mais texto para evidenciar a história da família |
-| Cards "Soluções Lupato" — estética | ⏳ Futuramente | Manter layout atual, possível redesenho em outro momento |
 | Carousel/Hero | ⏳ Futuramente | Será revisado em outro momento |
-| Hover dos Diferenciais | ⏳ A fazer | Transition ainda está rápida, deixar mais suave |
-| Seção de Números (Stats) | ⏳ Revisar conteúdo | Componente criado com valores placeholder. Cliente precisa confirmar os números reais. Sugestão de campos: Gerações de tradição, Anos de mercado, Rodas recondicionadas, Profissionais especializados. Ver lista completa de opções na conversa. |
+| Seção de Números (Stats) | ⏳ Revisar conteúdo | Componente criado com valores placeholder.
 
 ---
 
@@ -116,22 +83,8 @@ Aplicado em: navbar CTA, botão "Conheça nossos serviços", botão de envio do 
 |------|--------|
 | Seção de Recondicionamento + Modificações | ⏳ Layout a repensar |
 | Seção Comércio de Rodas | ⏳ Layout a repensar |
-| Cards "Linhas que Atendemos" | ⏳ Visual a atualizar |
 
 > A página de Serviços está **pausada** — foco atual é finalizar a home.
-
----
-
-## Decisões Tomadas
-
-- ✅ Paleta: ouro + preto + branco (cores do Instagram do cliente)
-- ✅ Fontes: Plus Jakarta Sans + Inter
-- ✅ Seção "Entenda nosso Processo" removida
-- ✅ Emojis nos cards substituídos por ícones (react-icons)
-- ✅ Coloração azulada nas imagens de fundo removida
-- ✅ Padrão de hover dos botões: inversão escuro/dourado
-- ✅ Navbar com blur glassmorphism
-- ✅ Animações de scroll com framer-motion (whileInView, once: true)
 
 ---
 
