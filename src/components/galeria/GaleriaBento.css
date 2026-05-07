@@ -1,0 +1,293 @@
+/* ── Seção ── */
+.galeria-section {
+  background: var(--dark);
+  padding: 5rem 2rem 6rem;
+}
+
+/* ── Cabeçalho ── */
+.galeria-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.galeria-label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.galeria-divider {
+  width: 44px;
+  height: 3px;
+  background: var(--gold);
+  margin: 0.75rem auto 1.25rem;
+  border-radius: 2px;
+}
+
+.galeria-header h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.galeria-header p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* ── Bento Grid ──
+   Layout (4 colunas, 3 linhas):
+   a a b c
+   a a d e
+   f g g h
+*/
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  grid-template-rows: 260px 260px 240px;
+  grid-template-areas:
+    "a a b c"
+    "a a d e"
+    "f g g h";
+  gap: 10px;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ── Itens ── */
+.bento-item {
+  position: relative;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--dark-2);
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.bento-a img { object-position: center; }
+.bento-b img { object-position: center; }
+.bento-c img { object-position: center; }
+.bento-d img { object-position: center; }
+.bento-e img { object-position: center; }
+.bento-f img { object-position: center 70%; }
+.bento-g img { object-position: center 70%; }
+.bento-h img { object-position: center; }
+
+.bento-item:hover img {
+  transform: scale(1.06);
+}
+
+/* overlay ao hover */
+.bento-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.bento-item:hover .bento-overlay {
+  opacity: 1;
+}
+
+.bento-zoom {
+  font-size: 2.2rem;
+  color: var(--white);
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* áreas */
+.bento-a { grid-area: a; }
+.bento-b { grid-area: b; }
+.bento-c { grid-area: c; }
+.bento-d { grid-area: d; }
+.bento-e { grid-area: e; }
+.bento-f { grid-area: f; }
+.bento-g { grid-area: g; }
+.bento-h { grid-area: h; }
+
+/* ── Lightbox ── */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.lightbox-panel {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.lightbox-caption {
+  margin-top: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--gray-light);
+  text-align: center;
+}
+
+.lightbox-counter {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: var(--gray);
+  margin-top: 0.3rem;
+}
+
+/* botões do lightbox */
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--white);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+  font-size: 1.25rem;
+}
+
+.lightbox-close:hover,
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--gold);
+  color: var(--dark);
+  transform: scale(1.08);
+}
+
+.lightbox-close {
+  top: -52px;
+  right: 0;
+}
+
+.lightbox-prev {
+  left: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-prev:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+.lightbox-next {
+  right: -56px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.08);
+}
+
+/* ── Dicas responsivas ── */
+.galeria-hint-mobile { display: none; }
+.galeria-hint-desktop { display: block; }
+
+/* ── Mobile Swiper — oculto por padrão ── */
+.galeria-mobile { display: none; }
+
+/* ── Slide mobile ── */
+.galeria-slide-btn {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--dark-2);
+  display: block;
+}
+
+.galeria-slide-btn img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.galeria-slide-btn:active img {
+  transform: scale(1.04);
+}
+
+/* paginação do Swiper */
+.galeria-swiper {
+  padding-bottom: 2.2rem !important;
+}
+
+.galeria-swiper .swiper-pagination-bullet {
+  background: var(--gray);
+  opacity: 1;
+}
+
+.galeria-swiper .swiper-pagination-bullet-active {
+  background: var(--gold);
+}
+
+/* ── Breakpoint: ativa mobile ── */
+@media (max-width: 768px) {
+  .bento-grid         { display: none; }
+  .galeria-mobile     { display: block; }
+  .galeria-hint-desktop { display: none; }
+  .galeria-hint-mobile  { display: block; }
+  .galeria-section    { padding: 4rem 1.25rem 5rem; }
+}
+
+/* ── Lightbox — ajuste mobile ── */
+@media (max-width: 700px) {
+  .lightbox-backdrop  { padding: 1rem; align-items: flex-end; }
+  .lightbox-panel     { max-width: 100%; }
+  .lightbox-img       { max-height: 65vh; border-radius: 10px 10px 0 0; }
+  .lightbox-close     { top: -48px; right: 0; }
+  .lightbox-prev      { left: 0; top: auto; bottom: -56px; transform: none; }
+  .lightbox-prev:hover { transform: scale(1.08); }
+  .lightbox-next      { right: 0; top: auto; bottom: -56px; transform: none; }
+  .lightbox-next:hover { transform: scale(1.08); }
+  .lightbox-caption   { font-size: 0.82rem; }
+}

@@ -113,7 +113,8 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 0 0 0 rgba(246, 195, 10, 0);
+  transition: background var(--transition), color var(--transition), transform var(--transition), box-shadow 0.35s ease;
   margin-top: 0.25rem;
 }
 
@@ -121,7 +122,7 @@
   background: var(--dark);
   color: var(--gold);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 18px 7px rgba(246, 195, 10, 0.45), 0 4px 22px rgba(246, 195, 10, 0.25);
 }
 
 .map-section {

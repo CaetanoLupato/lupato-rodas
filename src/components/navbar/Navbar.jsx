@@ -29,9 +29,9 @@ function Navbar() {
           <li><Link smooth to="/#inicio" onClick={close}>Início</Link></li>
           <li><Link smooth to="/#sobre" onClick={close}>Sobre Nós</Link></li>
           <li><Link to="/servicos" onClick={closeAndTop}>Serviços</Link></li>
-          <li>
+          <li className="nav-cta-item">
             <Link smooth to="/#localizacao" onClick={close} className="nav-cta">
-              Como Chegar
+              Fale com a gente
             </Link>
           </li>
         </ul>

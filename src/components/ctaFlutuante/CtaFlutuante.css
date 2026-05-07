@@ -1,0 +1,79 @@
+/* ── Botão flutuante WhatsApp ── */
+.wa-flutuante {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 900;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(37, 211, 102, 0.45);
+  opacity: 0;
+  transform: scale(0.8) translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.2s ease;
+}
+
+.wa-flutuante--visivel {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: auto;
+  animation: wa-pulse 2.8s ease-in-out infinite;
+}
+
+.wa-flutuante:hover {
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.65);
+  transform: scale(1.08);
+  animation: none;
+}
+
+@keyframes wa-pulse {
+  0%, 100% { box-shadow: 0 4px 18px rgba(37,211,102,0.45); }
+  50%       { box-shadow: 0 4px 28px rgba(37,211,102,0.75), 0 0 0 8px rgba(37,211,102,0.12); }
+}
+
+/* tooltip */
+.wa-flutuante__tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--dark);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 5px 10px;
+  border-radius: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.wa-flutuante:hover .wa-flutuante__tooltip {
+  opacity: 1;
+}
+
+/* ── Barra fixa mobile ── */
+.mobile-bar {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .wa-flutuante {
+    bottom: 1.5rem;
+    right: 1rem;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .wa-flutuante__tooltip { display: none; }
+}

@@ -1,29 +1,30 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { HashLink as Link } from "react-router-hash-link";
 import "./Diferenciais.css";
-import { FaChartLine, FaCheckCircle, FaUsers, FaCogs } from "react-icons/fa";
+import { FaTruck, FaShieldAlt, FaCogs, FaAward } from "react-icons/fa";
 
 const cards = [
   {
-    icon: <FaChartLine />,
-    title: "Controle de Qualidade",
-    text: "Gerido pelo nosso sistema de gestão de qualidade, seguimos princípios que orientam todas as nossas atividades."
+    icon: <FaAward />,
+    title: "40 Anos de Referência",
+    text: "Empresa familiar com mais de quatro décadas de atuação, somos referência em recondicionamento e venda de rodas em Ribeirão Preto e região."
   },
   {
-    icon: <FaCheckCircle />,
-    title: "Eficiência e Segurança",
-    text: "Atuamos com precisão na recuperação e venda de rodas e aros para caminhões, máquinas, tratores e empilhadeiras."
+    icon: <FaShieldAlt />,
+    title: "Garantia no Serviço",
+    text: "Todo recondicionamento tem garantia. Você sai com a roda pronta e com segurança respaldada."
   },
   {
-    icon: <FaUsers />,
-    title: "Compromisso e Ética",
-    text: "Parceria de confiança. Atuamos com integridade, profissionalismo, respeito mútuo e excelência no serviço prestado."
+    icon: <FaTruck />,
+    title: "Sistema de Troca",
+    text: "Trabalhamos com sistema à base de troca, buscamos e entregamos com frota própria, sem você parar a operação."
   },
   {
     icon: <FaCogs />,
-    title: "Equipe Especializada",
-    text: "Profissionais qualificados para entender sua necessidade e oferecer a melhor solução para cada caso."
-  }
+    title: "Variação de Medidas",
+    text: "Trabalhamos com diferentes medidas, modelos e configurações de rodas, oferecendo soluções personalizadas para atender as mais diversas necessidades."
+  },
 ];
 
 const cardItem = {
@@ -43,10 +44,7 @@ const Diferenciais = () => (
       <p className="diferenciais-label">Nossos Diferenciais</p>
       <div className="diferenciais-divider"></div>
       <h2>Por que trabalhar com a gente?</h2>
-      <p>
-        Atendemos Ribeirão Preto e região. Trabalhamos com sistema à base de troca,
-        levando o produto e o serviço com rapidez e eficiência.
-      </p>
+    
     </motion.div>
 
     <motion.div
@@ -62,6 +60,18 @@ const Diferenciais = () => (
           <p>{card.text}</p>
         </motion.div>
       ))}
+    </motion.div>
+
+    <motion.div
+      className="diferenciais-cta"
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+      viewport={{ once: true }}
+    >
+      <Link smooth to="/#localizacao" className="diferenciais-cta__btn">
+        Solicite um orçamento
+      </Link>
     </motion.div>
   </section>
 );

@@ -33,7 +33,7 @@ const Footer = () => (
       <div className="footer-section">
         <p className="footer-title">Contato</p>
         <div className="footer-contact-item"><FaMapMarkerAlt /><span>Marginal Rodovia Anhanguera, 319<br />Ribeirão Preto, SP — 14070-730</span></div>
-        <div className="footer-contact-item"><FaPhone /><span>(16) 98167-2009</span></div>
+        <div className="footer-contact-item"><FaPhone /><a href="tel:+5516981672009">(16) 98167-2009</a></div>
         <div className="footer-contact-item"><FaEnvelope /><span>lupato@terra.com.br</span></div>
       </div>
     </div>
